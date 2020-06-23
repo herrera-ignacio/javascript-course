@@ -27,6 +27,7 @@ At the end of this README you'll find my own word of advice on how to approach t
 * [Variables: Block-level vs Function-level scope](./vanilla/vars.md)
 * [Strict mode](./vanilla/strict.md)
 * [Objects in detail](./vanilla/objects.md)
+* [Prototype and Constructor](./vanilla/proto.md)
 * [Built-in Collections](./vanilla/collections.md)
 * [Hoisting](./vanilla/hoisting.md)
 
