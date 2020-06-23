@@ -24,9 +24,11 @@ At the end of this README you'll find my own word of advice on how to approach t
 ### 2.JavaScript Fundamentals
 
 * [Lenguage Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+* [Variables: Block-level vs Function-level scope](./vanilla/vars.md)
 * [Strict mode](./vanilla/strict.md)
 * [Objects in detail](./vanilla/objects.md)
 * [Built-in Collections](./vanilla/collections.md)
+* [Hoisting](./vanilla/hoisting.md)
 
 
 ## How to approach
