@@ -12,9 +12,18 @@ At the end of this README you'll find my own word of advice on how to approach t
 
 ## TOC
 
-### Introduction to JavaScript
+### 1.Introduction to Programming
 
-* [Welcome to JavaScript](./README.md)
+* [What is JavaScript and ECMAScript](./intro/README.md)
+* [HTML, CSS and JavaScript]
+* [Server-side vs Client-side]
+* [Dynamic vs Static]
+* [What is an API]
+* [Web APIs & Web Services]
+* [Browser API]
+* [Node API]
+
+### 2.JavaScript Fundamentals
 
 ## How to approach
 
