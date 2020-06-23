@@ -23,7 +23,11 @@ At the end of this README you'll find my own word of advice on how to approach t
 
 ### 2.JavaScript Fundamentals
 
-* [Lenguage Reference](./vanilla/reference.md)
+* [Lenguage Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+* [Strict mode](./vanilla/strict.md)
+* [Objects in detail](./vanilla/objects.md)
+* [Built-in Collections](./vanilla/collections.md)
+
 
 ## How to approach
 

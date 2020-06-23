@@ -14,6 +14,7 @@ The standard received a significant update as ECMAScript edition 3 in 1999, and 
 * Scripting language
 * Sever-side/Client-side
 * First Class Functions
+* Object-Oriented
 * Prototype-based
 * Multi-Paradigm
 * Single-threaded
@@ -39,9 +40,29 @@ Javascript can be used both as client-side and server-side language, for example
 
 A programming language is said to have First-class functions when functions are treated like any other variable.
 
+### Object Oriented
+
+Anything you look at in a piece of JavaScript code has a good change of being an object. Only five primitve types are not objects: `number`, `string`, `boolean`, `null` and `undefined`. Functions are objets too, they can have properties and methods.
+
+When you define a variable, you are already dealing with objects. First, the variable automatically becomes a property of an internal object known as _Activation Object_ (global object), second, this variable is actually also object-like because it has its own properties (attributes).
+
+There are two types of objets:
+* _Native_: described in the ECMAScript standard, that can be further categorized as built in or user-defined.
+* _Host_: defined by the host environment (for example, the browser environment, window and all the DOM objects)
+
 ### Prototype-based
 
 JavaScript supports object-oriented programming with object prototypes instead of classes (see Prototype Inheritance).
+
+#### No Classes Previous to ES6
+
+You create a blank object when you need one and then start adding interesting members to it. You compose objects by adding primitives, functions or other objects to them as their properties, though every objects comes with a few built-in properties already.
+
+#### Prototypes
+
+JavaScript does have __inheritance__ that can be accomplished in various ways, which usually make use of prototypes.
+
+A __prototype__ is an object, and every function you create automatically gets a prototype property that points to a new blank object, that is almost identical to an object created with an object literal or `Object()` constructor, except that its constructor property points to the function you create and not to the build-in `Object()`.
 
 ### Multi-Paradigm
 
