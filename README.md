@@ -23,6 +23,8 @@ At the end of this README you'll find my own word of advice on how to approach t
 
 ### 2.JavaScript Fundamentals
 
+* [Lenguage Reference](./vanilla/reference.md)
+
 ## How to approach
 
 In my humble opinion, based on some years learning multiple programming languages (C, C++, Java, JavaScript, Python, Golang), multiple frameworks (Express, Angular, React, jQuery, React-Native, Django, Flask, Boostrap, Materialize, etc), and applying those in projects of all sizes, I came to find that the most efficient way to learn a new language and be productive with it fast, is to focus on some things more than others.

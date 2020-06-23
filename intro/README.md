@@ -58,32 +58,127 @@ A web page/app with no dynamically updating content is referred to as Static, it
 * ECMAScript 1 (1997)
 * ECMAScript 2 (1998)
 * ECMAScript 3 (1999)
-  * Regular Expressions
-  * `try` and `catch`
 * ECMAScript 4 (never released)
 * ES5 - ECMAScript 5 (2009)
-  * `use strict` mode
-  * JSON support
-  * `String.trim()`
-  * `Array.isArray()`
-  * Array iteration methods
-  * `Promise`
 * ECMAScript 5.1 (2011)
-* ES6 - EMCAScript 2015
-  * `let` and `const`
-  * default parameter values
-  * `Array.find()`
-  * `Array.findIndex()`
+* ES6 - EMCAScript 2015 (Promises, Biggest update, decided to do a release every new year)
 * ECMAScript 2016
-  * Exponential operator `**`
-  * `Array.prototype.includes`
-* ECMAScript 2017
-  * String padding
-  * new Object properties
-  * `async`/`await`
-  * Shared memory
+* ECMAScript 2017 (async/await)
 * ECMAScript 2018
-  * Rest oeprator & Spread properties `...`
-  * Asynchronous Iteration
-  * `Promise.finally()`
-  * `RegExp`
+
+### ES6 (2015)
+
+[Features: Overview & Comparison](http://es6-features.org/#Constants)
+
+ES6 can't compile directly in browsers, so we need a compiler such as _babel_ from ES6 to ES5.
+
+* __Constants__ `const`
+* __Scoping__ (without hoisting)
+    * Block-Scoped Variables: `let`
+    * Block-Scoped Functions definitions
+* __Arrow Functions__
+    * Expression Bodies
+    * Statement Bodies
+    * Lexical `this` (__!__)
+* __Extended Parameter Handling__
+    * Default Parameter Values `function f (x=1)`
+    * Rest Parameter `function f (x, y, ...a)`
+    * Spread Operator `var other = [1, 2, ...params]`
+* __Template Literals__
+    * String interpolation and Raw String Access `${var}`
+* __Extended Literals__
+    * Binary & Octal Literal
+    * Unicode String & RegExp Literal
+* __Enchanced Regular Expressions__
+    * Sticky Matching
+* __Enhanced Object Properties__
+    * Property Shorthand: `obj = { x, y }`
+    * Computed Property Names
+    * Method Properties: support for regular and generator functions notation in object property definitions
+* __Destructing Assignment__
+    * Array Matching
+    * Object Matching
+        * Shorthand
+        * Deep Matching
+    * Array and Object default values
+    * Parameter Context Matching (Destructing Assignment
+    * Fail-Soft Destructing
+* __Modules__
+    * Value Export/Import
+    * Default & Wildcard
+* __Classes__
+    * Class Definition
+    * Class Inheritance
+    * Class From Expressions
+    * Base Class Access
+    * Static Members
+    * Getter / Setter
+* __Symbol Type__
+    * Symbol Type (unique and immutable data type tob eused as an identifier for object properties)
+    * Global Symbols
+* __Iterators__
+    * Iterator & For-Of Operator
+* __Generators__
+    * Generator Function, iterator Protocol
+    * Generator Function, Direct Use
+    * Generator Matching
+    * Generator Control-FLow
+    * Generator Methods
+* __Data Structures__
+    * Map / Sett
+    * WeakMap / WeakSet
+    * Typed Arrays
+* __New Built-In Methods__
+    * Object Property Assignment `Object.assign`
+    * Array Element Finding `arr.find` `arr.findIndex`
+    * String Repeating `str.repeat`
+    * String Searching `str.startsWith` `str.endsWith` `str.includes`
+    * Number Type Checking `.isNan()` `.isFinite()`
+    * Number Safety Checking `.isSafeInteger()`
+    * Number Comparison (Availability of a standard Epsilon value)
+    * Number Truncation `Math.trunc`
+    * Number Sign Determination `.sign`
+* __Promises__
+* __Meta-Programming__
+    * Proxying
+    * Reflection
+* __Internationalization & Location__
+    * Collation
+    * Number Formatting
+    * Currency Formatting
+    * Date/Time Formatting
+
+### ES7 (2016)
+
+They decided to release a new version of ECMAScript every year starting in 2015. A yearly update means no more big releases like ES6.
+
+* Array.prototype.includes()
+* Exponentiation operator
+
+### ES8 (2017)
+
+* __Async Functions__
+    * Async
+    * Await
+* __Shared memory and atomics__
+    * Atomics
+    * SharedArrayBuffer
+    * [More info](https://2ality.com/2017/01/shared-array-buffer.html)
+* Object.values
+* Object.entries
+* Object.getOwnPropertyDescriptors
+* String padding
+* Trailing commas in function parameters lists and calls
+
+### ES9 (2018)
+
+* [__Asynchronous Iteration__](https://2ality.com/2016/10/asynchronous-iteration.html)
+* __Rest/Spread properties__
+* __Promise.prototype.finally__
+* Template literal revision
+* RegExp features
+    * [Named capture groups](https://2ality.com/2017/05/regexp-named-capture-groups.html)
+    * [Unicode property escapes](https://2ality.com/2017/07/regexp-unicode-property-escapes.html)
+    * [Lookbehind assertions](https://2ality.com/2017/05/regexp-lookbehind-assertions.html)
+    * [s(dotAll) flag](https://2ality.com/2017/07/regexp-dotall-flag.html)
+
