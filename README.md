@@ -29,10 +29,10 @@ At the end of this README you'll find my own word of advice on how to approach t
 * [Objects in detail](./vanilla/objects.md)
 * [Constructor and Prototype](./vanilla/proto.md)
 * [`this` keyword](./vanilla/this.md)
-* [Inheritance and Prototype Chain](./vanilla/proto-chain)
+* [Inheritance and Prototype Chain](./vanilla/proto-chain.md)
 * [Built-in Collections](./vanilla/collections.md)
 * [Hoisting](./vanilla/hoisting.md)
-
+ 
 
 ## How to approach
 

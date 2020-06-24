@@ -1,14 +1,26 @@
-function test() {
-	var prop = 't';
-	var o = {
-		prop: 37,
-		f: () => {
-			console.log(this);
-			return this.prop;
-		}
-	};
-	const inner = () => console.log(this);
-	return inner;
+function Graph() {
+	this.vertices = [];
+	this.edges = [];
 }
-const i = test();
-i();
+
+Graph.prototype = {
+	addVertex: function(v) {
+		this.vertices.push(v);
+	}
+};
+
+var g = new Graph();
+g.addVertex(1);
+console.log(g.edges);
+
+Graph.prototype.test = function() { console.log('test') }
+
+g.test()
+
+Graph.prototype = {
+	addEdge: function(e) {
+		this.edges.push(e)
+	}
+}
+
+g.addEdge(1)
