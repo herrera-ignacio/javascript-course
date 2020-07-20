@@ -37,6 +37,7 @@ At the end of this README you'll find my own word of advice on how to approach t
 
 * [Node, event-driven, non-blocking I/O model](./node)
 * [Callbacks](./node/callbacks.md)
+* [Event Loop](./node/eventloop.md)
 
 ## How to approach
 
