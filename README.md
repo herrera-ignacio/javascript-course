@@ -32,6 +32,7 @@ At the end of this README you'll find my own word of advice on how to approach t
 * [Inheritance and Prototype Chain](./vanilla/proto-chain.md)
 * [Built-in Collections](./vanilla/collections.md)
 * [Hoisting](./vanilla/hoisting.md)
+* [Promises](./vanilla/promises.md)
  
 ### 3. Node
 
