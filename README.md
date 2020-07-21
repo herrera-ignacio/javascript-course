@@ -40,6 +40,7 @@ At the end of this README you'll find my own word of advice on how to approach t
 * [Event Loop](./node/eventloop.md)
 * [Buffers](./node/buffers.md)
 * [Streams](./node/streams.md)
+* [Backpressuring in Streams](./node/backpressuring.md)
 
 ## How to approach
 
