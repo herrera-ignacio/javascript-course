@@ -37,3 +37,38 @@ asyncOperation ( params.., function ( err, returnValues.. ) {
   //This code gets run after the async operation gets run
 });
 ```
+
+## Examples
+
+### After processing, do something
+
+```js
+function asyncCallback (callback) {
+	console.log('Start processing...')	
+
+	const delta = new Date()
+	delta.setSeconds(delta.getSeconds() + 2)
+
+	while (delta > new Date()) {
+		// wait
+	}
+
+	console.log('Finish processing')
+
+	callback()
+}
+
+function cb () { console.log('After processing callback') }
+
+asyncCallback(cb)
+```
+
+```
+// Output:
+Start processing...
+Finish processing
+After processing callback
+```
+
+### Asynchronous processing
+

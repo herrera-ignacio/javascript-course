@@ -17,6 +17,14 @@ JavaScript runtime built on top of Chrome's V8 JS Engine.
 	* Networking
 	* Concurrency
 
+## Meta Model
+
+In its most basic form, JS is a Synchronous, Blocking, and Single-Threaded language, in which only one operation can be in progress at a time.
+
+BUT, web brosers, and runtime environments (such as Node.js), define APIs that allow us to register functions that should not be executed synchronously, and should instead be invoked asynchronously when some kind of event occurs. This means you can let your code do several things at the same time without stopping or blocking the main thread.
+
+If you are doing operations like querying a database and using results to populate templates, it is better to push this off the main thread and complete the task asynchronously.
+
 ## Event-Driven, Non-Blocking I/O Model
 
 This is what makes Node so great.
@@ -35,7 +43,7 @@ These events are monitored by code known as an _Event Listener_ that, if it dete
 
 Blocking is when execution of additional JS in Node.js process must wait until a non-JS operation completes.
 
-All I/O methods in Node.js standard library provide _asynchronous versions__, which are __non-blocking__, and accept callback functions.
+All I/O methods in Node.js standard library provide __asynchronous versions__, which are __non-blocking__, and accept callback functions.
 
 > Blocking methods execute synchronously, and non-blocking methods execute asynchronously.
 

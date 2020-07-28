@@ -1,26 +1,23 @@
-function Graph() {
-	this.vertices = [];
-	this.edges = [];
-}
-
-Graph.prototype = {
-	addVertex: function(v) {
-		this.vertices.push(v);
-	}
+function timeoutPromise(interval) {
+return new Promise((resolve, reject) => {
+	setTimeout(function(){
+	resolve("done");
+	}, interval);
+});
 };
 
-var g = new Graph();
-g.addVertex(1);
-console.log(g.edges);
-
-Graph.prototype.test = function() { console.log('test') }
-
-g.test()
-
-Graph.prototype = {
-	addEdge: function(e) {
-		this.edges.push(e)
-	}
+async function timeTest() {
+	const res = await Promise.all([
+		timeoutPromise(3000),
+		timeoutPromise(3000),
+		timeoutPromise(3000)
+	]);
+	return res
 }
 
-g.addEdge(1)
+let startTime = Date.now();
+timeTest().then(() => {
+	let finishTime = Date.now();
+	let timeTaken = finishTime - startTime;
+	console.log("Time taken in milliseconds: " + timeTaken);
+});
