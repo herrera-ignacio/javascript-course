@@ -45,6 +45,8 @@ At the end of this README you'll find my own word of advice on how to approach t
 * [Buffers](./node/buffers.md)
 * [Streams](./node/streams.md)
 * [Backpressuring in Streams](./node/backpressuring.md)
+* [Event Emitters](./node/event-emitters.md)
+* [Anatomy of HTTP Transaction](./node/http-anatomy.md)
 
 ## How to approach
 
