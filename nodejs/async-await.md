@@ -31,7 +31,8 @@ hello().then(console.log)
 ```javascript
 // Trivial example
 async function hello() {
-  return greeting = await Promise.resolve("Hello");
+  const greeting = await Promise.resolve("Hello");
+  return greeting;
 };
 
 hello().then(console.log);

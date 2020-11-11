@@ -48,7 +48,7 @@ Main thread: Task A                   Task B
     Promise:      |__async operation__|
 ```
 
-Since the operation is happening somewhere else, the __main thread is not blocked__w hile the async operation is being processed.
+Since the operation is happening somewhere else, the __main thread is not blocked__ while the async operation is being processed.
 
 ## Asynchronous JS
 
