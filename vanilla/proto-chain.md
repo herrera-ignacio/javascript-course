@@ -49,7 +49,7 @@ When an inherited function is executed, the value of `this` points to the inheri
 var o = {
 	a: 2,
 	m: function() {
-		return this.1 + 1;
+		return this.a + 1;
 	}
 };
 console.log(o.m()); // 3
@@ -229,4 +229,4 @@ Also, when iterating over the properties of an object, __every__ enumerable prop
 
 ## Bad Practice: Extension of native prototypes
 
-This technique is called __monkey patching__ and __breaks encapsulation__. The only ood reason for extending a built-in prototype is to backport the features of newer JS engines.
+This technique is called __monkey patching__ and __breaks encapsulation__. The only good reason for extending a built-in prototype is to backport the features of newer JS engines.
