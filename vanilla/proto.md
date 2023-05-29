@@ -6,6 +6,8 @@
 - [`this` keyword in constructor functions](#this-keyword-in-constructor-functions)
 - [Prototype](#prototype)
   - [Prototype Inheritance Example](#prototype-inheritance-example)
+  - [Performance](#performance)
+  - [Bad Practice: Extension of native prototypes](#bad-practice-extension-of-native-prototypes)
 
 ## Constructor
 
@@ -144,3 +146,14 @@ rg.greet();
 mike.greet();
 // Hi, I am Mike
 ```
+
+### Performance 
+
+Lookup time for properties that are high up on the prototype chain can have a negative impact on the performance, and this may be significant where performance is critical. Additionally, trying to access nonexistent properties will always traverse the full prototype chain.
+
+Also, when iterating over the properties of an object, __every__ enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on _itself_ and not somewhere on its prototype chain, it is necessary to use the `hasOwnProperty` method which all objects inherit from `Object.prototype`. 
+
+### Bad Practice: Extension of native prototypes
+
+This technique is called __monkey patching__ and __breaks encapsulation__. The only good reason for extending a built-in prototype is to backport the features of newer JS engines.
+
