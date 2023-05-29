@@ -1,5 +1,12 @@
 # Constructor and Prototype
 
+- [Constructor](#constructor)
+- [Changing the `constructor` of an object](#changing-the-constructor-of-an-object)
+- [Changing the `constructor` of a function](#changing-the-constructor-of-a-function)
+- [`this` keyword in constructor functions](#this-keyword-in-constructor-functions)
+- [Prototype](#prototype)
+  - [Prototype Inheritance Example](#prototype-inheritance-example)
+
 ## Constructor
 
 Sometimes we need a "blueprint" for creating many objects of the same "type". The way to create an "object type", is to use an object _constructor function_. Objects of the same type are created by calling the constructor function with the `new` keyword.
@@ -45,7 +52,7 @@ myVar.constructor = myType
 
 ## Changing the `constructor` of a function
 
-Mostly this property is used for defining a funciton as a function-constructor with further calling it with `new` and prototype-inherits chain.
+Mostly this property is used for defining a function as a function-constructor with further calling it with `new` and prototype-inherits chain.
 
 ```js
 function Parent() {/* ... */}
@@ -59,21 +66,17 @@ Child.prototype.constructor = Child // return original constructor to child afte
 
 ## `this` keyword in constructor functions
 
-In JS, `this` is the object that "owns" the code. In a constructor function the value of `this` will become the new object when a new object is created.
+In a constructor function the value of `this` will become the new object when a new object is created.
 
 ## Prototype
 
-Prototypes are the mechanism by which JS objects inherit features from one another. The `prototype` property can be used to add methods to existing constructors.
+To provide inheritance, objects can have `prototype` object (on the Object's `constructor` functions), which acts as a template object from where objects can inherit methods and properties.
 
-### Prototype-based language?
+An object's prototype object may also have its own prototype object, which it inherits methods and properties from, and so on. This is often referred to as __Prototype Chain__.
 
-To provide inheritance, objects can have `prototype` object, which acts as a template object from where objects can inherit methods and properties.
+In JS, a link is made between the object instance and its prototype, and the methods and properties are found by __walking up the chain of prototypes__.
 
-An object's prototype object may also have a prototype object, which it inherits methods and properties from, and so on. This is often referred to as __Prototype Chain__, and explains why different objects have methods and properties defined on other objects available to them.
-
-To be exact, properties and methods are defined on the `prototype` property on the Objects' `constructor` functions, not the object instances themselves.
-
-In JS, a link is made between the object instance and its prototype (deprected `__proto__` property, which is derived from the `prototype` property on the constructor), and the methods and properties are found by __walking up the chain of prototypes__. We can use `Object.getPrototypeOf(obj)` to get the property on the constructor. For example, `Object.getPrototypeOf(new Foobar())` refers to the same object as `Foobar.prototype`.
+> We can use `Object.getPrototypeOf(obj)` to get the property on the constructor. For example, `Object.getPrototypeOf(new Foobar())` refers to the same object as `Foobar.prototype`.
 
 ### Prototype Inheritance Example
 
@@ -83,7 +86,7 @@ Suppose we have the following code:
 let person1 = new Person('Nacho', 'Herrera');
 ```
 
-What's happening is that `person1` inherits from prototype of `Person` which inhertis from prototype of `Object`. This is why you can call a method on person1 that's actually defined on `Object`, such as `person1.valueOf()`.
+What's happening is that `person1` inherits from prototype of `Person` which inherits from the prototype of `Object`. This is why you can call a method on person1 that's actually defined on `Object`, such as `person1.valueOf()`.
 
 Since JS doesn't exactly have sub-class objects, Prototype is a useful workaround to make a "base class" object of certain functions that act as objects.
 
@@ -105,10 +108,9 @@ var Employee = function(name, title) {
 };
 
 Employee.prototype = Object.create(Person.prototype);
-Employee.prototype.constructor = Employee; //If you don't set Object.prototype.constructor to Employee, 
-                                           //it will take prototype.constructor of Person (parent). 
-                                           //To avoid that, we set the prototype.constructor to Employee (child).
-
+// If you don't set Object.prototype.constructor to Employee, 
+// it will take prototype.constructor of Person (parent). 
+Employee.prototype.constructor = Employee;
 
 Employee.prototype.greet = function() {
   if (this.canTalk) {
@@ -121,27 +123,14 @@ var Customer = function(name) {
 };
 
 Customer.prototype = Object.create(Person.prototype);
-Customer.prototype.constructor = Customer; //If you don't set Object.prototype.constructor to Customer, 
-                                           //it will take prototype.constructor of Person (parent). 
-                                           //To avoid that, we set the prototype.constructor to Customer (child).
-
-
-var Mime = function(name) {
-  Person.call(this, name);
-  this.canTalk = false;
-};
-
-Mime.prototype = Object.create(Person.prototype);
-Mime.prototype.constructor = Mime; //If you don't set Object.prototype.constructor to Mime,
-                                   //it will take prototype.constructor of Person (parent).
-                                   //To avoid that, we set the prototype.constructor to Mime (child).
-
+// If you don't set Object.prototype.constructor to Customer, 
+// it will take prototype.constructor of Person (parent). 
+Customer.prototype.constructor = Customer; 
 
 var bob = new Employee('Bob', 'Builder');
 var joe = new Customer('Joe');
 var rg = new Employee('Red Green', 'Handyman');
 var mike = new Customer('Mike');
-var mime = new Mime('Mime');
 
 bob.greet();
 // Hi, I am Bob, the Builder
@@ -154,6 +143,4 @@ rg.greet();
 
 mike.greet();
 // Hi, I am Mike
-
-mime.greet();
 ```
