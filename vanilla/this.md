@@ -1,17 +1,30 @@
 # `this` keyword
 
+- [JavaScript way](#javascript-way)
+	- [Global Context](#global-context)
+	- [Function Context](#function-context)
+	- [Class Context](#class-context)
+	- [Derived Classes Context](#derived-classes-context)
+	- [Arrow functions](#arrow-functions)
+	- [Object method](#object-method)
+	- [Inline event handler](#inline-event-handler)
+
+## JavaScript way
+
 A function's `this` keyword behaves a little differently in JS compared to other languages. It also has some differences between _strict mode_ and non-strict mode.
 
-In most cases, the value of `this` is determined by _how a function is called_ (__Runtime binding__). ES5 introduced the `bind()` method to set the value of a function's `this` regardless of how it's called, and ES6 introduced _arrow functions_ which don't provide their own `this` binding but rather retains the `this` value of the enclosing lexical context.
+In most cases, the value of `this` is determined by _how a function is called_ (__Runtime binding__).
+
+ES5 introduced the `bind()` method to set the value of a function's `this` regardless of how it's called, and ES6 introduced _arrow functions_ which don't provide their own `this` binding but rather retains the `this` value of the enclosing lexical context.
 
 * In a method, `this` refers to the owner object.
 * Alone, `this` refers to the global object.
 * In a function, `this` refers to the global object, unless set by call.
 * In a function, in strict mode, `this` is undefined.
 * In an event, `this` refers to the element that received the event.
-* Methods like call(), and apply() can refer `this` to any object (except arrow functions).
+* `bind()`, `call()`, and `apply()` can bind `this` to any object (except arrow functions).
 
-## Global Context
+### Global Context
 
 In global execution context (outside of any function), `this` refers to the global object whether in strict mode or not.
 
@@ -19,7 +32,7 @@ In global execution context (outside of any function), `this` refers to the glob
 console.log(this === window); // true
 ```
 
-## Function Context
+### Function Context
 
 Inside a function, the value of `this` depends on how the function is called. You can set the value of `this` to a particular value when calling a function, using `call()`, `apply()` or `bind()`.
 
@@ -40,11 +53,13 @@ function f2() {
 f2() === undefined; // true
 ```
 
-## Class Context
+### Class Context
 
 The behavior of `this` in classes and functions is similar, since classes are functions under the hood.
 
-Within a class constructor, `this` is a regular object, refers to the object to be created. All non-static methods within the class are added to the prototype of `this`. Static methods will be added as properties to the class itself.
+Within a class constructor, `this` is a regular object, refers to the object to be created.
+
+All non-static methods within the class are added to the prototype of `this`. Static methods will be added as properties to the class itself.
 
 ```js
 class Example {
@@ -60,7 +75,7 @@ class Example {
 new Example(); // ['constructor', 'first', 'second']
 ```
 
-## Derived Classes Context
+### Derived Classes Context
 
 Unlike base class constructors, derived constructors have no initial `this` binding. Calling `super()` creates a `this` binding within the constructor and essentially has the effect of evaluating the following line of code:
 
@@ -68,15 +83,13 @@ Unlike base class constructors, derived constructors have no initial `this` bind
 this = new Base();
 ```
 
-Refering to `this` before calling `super()` will throw an error.
+Referring to `this` before calling `super()` will throw an error.
 
-Derived classes must not return before calling `super()` unless they return an `Object` or have no constructor at all.
-
-## Arrow functions
+### Arrow functions
 
 In Arrow functions, `this` retains the value of the enclosing lexical context's `this`. In global code, it will be set to the global object. No matter what, `this` is set to what it was when it was created. The same applies to arrow functions created inside other functions.
 
-You cannot bind the scope using `apply`, `call` or `bind` like with normal functions.
+> You cannot bind the scope using `apply`, `call` or `bind` like with normal functions.
 
 ```js
 var obj = {
@@ -117,7 +130,7 @@ myObj = {
 };
 ```
 
-## Object method
+### Object method
 
 When a function is called as a method of an object, its `this` is set to the object the method is called on.
 
@@ -135,7 +148,7 @@ o.f = independent;
 console.log(o.f()); // 37
 ```
 
-## Inline event handler 
+### Inline event handler 
 
 `this` is set to the DOM element on which the listener is placed.
 
