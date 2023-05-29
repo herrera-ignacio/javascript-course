@@ -27,7 +27,6 @@ At the end of this README you'll find my own word of advice on how to approach t
 
 - [Language Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 - [Variables: Block-level vs Function-level scope](./vanilla/vars.md)
-- [Strict mode](./vanilla/strict.md)
 - [Objects in detail](./vanilla/objects.md)
 - [Constructor and Prototype](./vanilla/proto.md)
 - [`this` keyword](./vanilla/this.md)
@@ -35,6 +34,7 @@ At the end of this README you'll find my own word of advice on how to approach t
 - [Built-in Collections](./vanilla/collections.md)
 - [Hoisting](./vanilla/hoisting.md)
 - [Promises](./vanilla/promises.md)
+- [Strict mode](./vanilla/strict.md)
 
 ## 3. Node
 
