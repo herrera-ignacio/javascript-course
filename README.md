@@ -4,11 +4,12 @@ This is a complete course to become an advanced JavaScript developer. Here you w
 
 I will cover both Frontend and Backend related topics. You will learn the importance of testing your code, and how to do it, how to build your own Web HTTP Server, and develop dynamic and responsive web/mobile applications.
 
-- [1.Introduction to Programming](#1introduction-to-programming)
-- [2.JavaScript Fundamentals](#2javascript-fundamentals)
-- [3. Node](#3-node)
-- [How to approach](#how-to-approach)
-  - [What to focus on](#what-to-focus-on)
+- [JavaScript Complete Course](#javascript-complete-course)
+  - [1.Introduction to Programming](#1introduction-to-programming)
+  - [2.JavaScript Fundamentals](#2javascript-fundamentals)
+  - [3. Node](#3-node)
+  - [How to approach](#how-to-approach)
+    - [What to focus on](#what-to-focus-on)
 
 This course will be developed iteratively so you might not find everything yet. I plan to cover everything you might need to learn javascript from beginner to advanced and land a job, 100% free. It's impossible to cover every single topic, and it would be a waste of time trying to learn every single detail of a technology that's continuously evolving. Rather, I'll focus on the core concepts and good practices. Once you get a solid understanding of JavaScript's foundations, you'll be able to solve almost anything using some logical thinking and your favorite search engine.
 
@@ -38,10 +39,13 @@ At the end of this README you'll find my own word of advice on how to approach t
 - [Control flow](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#control_flow)
 - [Objects in detail](./vanilla/objects.md)
 - [Prototypes and Constructors](./vanilla/proto.md)
-- [`this` keyword](./vanilla/this.md)
+- [`this` keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 - [Hoisting](./vanilla/hoisting.md)
-- [Promises](./vanilla/promises.md)
-- [Strict mode](./vanilla/strict.md)
+- [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode#no_this_substitution)
+- [Single Threaded JS](https://developer.mozilla.org/en-US/docs/Glossary/Thread)
+  - [Introducing Workers](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+  - [Web Workers API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)
 
 ## 3. Node
 
