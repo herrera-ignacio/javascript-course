@@ -8,6 +8,7 @@ I will cover both Frontend and Backend related topics. You will learn the import
   - [1.Introduction to Programming](#1introduction-to-programming)
   - [2.JavaScript Fundamentals](#2javascript-fundamentals)
   - [3. Node](#3-node)
+  - [4. Exerices](#4-exerices)
   - [How to approach](#how-to-approach)
     - [What to focus on](#what-to-focus-on)
 
@@ -60,6 +61,10 @@ At the end of this README you'll find my own word of advice on how to approach t
 - [Back-pressure in Streams](./nodejs/backpressuring.md)
 - [Event Emitters](./nodejs/event-emitters.md)
 - [Anatomy of HTTP Transaction](./nodejs/http-anatomy.md)
+
+## 4. Exerices
+
+- [Custom array functional methods](exercises/array/custom-methods)
 
 ## How to approach
 
