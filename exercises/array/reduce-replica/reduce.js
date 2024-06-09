@@ -1,10 +1,10 @@
 const assert = require('node:assert/strict');
 
 /**
- * 
- * @param {Array} arr 
- * @param {(acc, any) => } reduceFn 
- * @param {any} initialValue 
+ *
+ * @param {Array} arr
+ * @param reduceFn
+ * @param {any} initialValue
  */
 function customReducer(arr, reduceFn, initialValue) {
   let res = initialValue;

@@ -1,24 +1,42 @@
 # Buffers
 
-## Why Buffers
+<!-- TOC -->
+* [Buffers](#buffers)
+* [What are Buffers?](#what-are-buffers)
+* [Why use Buffers?](#why-use-buffers)
+* [Where do you see Buffers?](#where-do-you-see-buffers)
+* [Usage examples](#usage-examples)
+  * [Creation](#creation)
+  * [Writing](#writing)
+<!-- TOC -->
 
-Pure JS, does not handle straight binary data very well. This is fine on the browser, where most data is in the form of strings. However, Node.js servers have to also deal with TCP streams and reading and writing to the filesystem, both of which make it necessary to deal with purely binary streams of data.
+> [Node's Buffer documentation](https://nodejs.org/api/buffer.html)
 
-## What are Buffers
+# What are Buffers?
 
-`Buffer` class in Node.js is designed to handle raw binary data. Each buffer corresponds to some raw memory allocated outside V8.
+`Buffer` class in Node.js is designed to handle raw binary data.
+Each buffer corresponds to some raw memory allocated outside V8.
 
-Buffers act somewhat like arrays of integers, but aren't resizable and have a whole bunch of methods specifically for binary data.
+Buffers act somewhat like arrays of integers,
+but aren't resizable and have a bunch of methods specifically for binary data.
 
-The integers in a Buffer each represent a byte and so are limited to values from 0 to 255 inclusive. When using `console.log()` to print the `Buffer` instance, you'll get a chain of values in hexadecimal values.
+The integers in a Buffer each represent a byte and so are limited to values from 0 to 255 inclusive.
+When using `console.log()` to print the `Buffer` instance, you'll get a chain of values in hexadecimal values.
 
-## Where You Se Buffers.
+# Why use Buffers?
+
+Pure JS does not handle straight binary data very well.
+This is fine on the browser,where most data is in the form of strings.
+However, Node.js servers have to also deal with TCP streams and reading and writing to the filesystem,
+both of which make it necessary to deal with purely binary streams of data.
+
+# Where do you see Buffers?
 
 In the wild, buffers are usually seen in the context of binary data coming from streams, such as `fs.createReadStream`.
 
-## Ussage
+# Usage examples
 
-### Creation
+## Creation
 
 ```js
 var buffer = Buffer.alloc(8);
@@ -34,11 +52,10 @@ var buffer = Buffer.from("I'm a string!", "utf-8");
 // <Buffer 49 27 6d 20 61 20 73 74 72 69 6e 67 21>
 ```
 
-### Writting
+## Writing
 
 ```js
 var buffer = Buffer.alloc(16)
 
 buffer.write("Hello", "utf-8")
 ```
-	
