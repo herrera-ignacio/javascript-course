@@ -89,13 +89,33 @@ is to focus on some specific things more than others.
 
 > I highly recommend going through the [NodeJS learning material](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs).
 
+### Getting started
+
 - [Node, event-driven, non-blocking I/O model](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
+- [Differences between Node.js and the browser](https://nodejs.org/en/learn/getting-started/differences-between-nodejs-and-the-browser)
+- [The V8 JavaScript engine](https://nodejs.org/en/learn/getting-started/the-v8-javascript-engine)
+- [The package manager: npm](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager)
+
+### Working asynchronously
+
+- [Asynchronous flow control](https://nodejs.org/en/learn/asynchronous-work/asynchronous-flow-control)
+- [Blocking vs non-blocking](https://nodejs.org/en/learn/asynchronous-work/overview-of-blocking-vs-non-blocking)
+- [Don't block the Event Loop or the Worker Pool](https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop)
+- [Callbacks](https://nodejs.org/en/learn/asynchronous-work/javascript-asynchronous-programming-and-callbacks)
+- [Discover JS Timers](https://nodejs.org/en/learn/asynchronous-work/discover-javascript-timers)
 - [Concurrency model and the Event Loop](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
+- [Understanding process.nextTick()](https://nodejs.org/en/learn/asynchronous-work/understanding-processnexttick)
+- [Understanding setImmediate()](https://nodejs.org/en/learn/asynchronous-work/understanding-setimmediate)
 - [Buffers](./nodejs/buffers.md)
 - [Streams](./nodejs/streams.md)
   - [Backpressuring in Streams](https://nodejs.org/en/learn/modules/backpressuring-in-streams)
 - [Event Emitters](./nodejs/event-emitters.md)
-- [Anatomy of HTTP Transaction](./nodejs/http-anatomy.md)
+
+
+### Performance and security
+
+- [Profiling Node applications](https://nodejs.org/en/learn/getting-started/profiling)
+- [Security best practices](https://nodejs.org/en/learn/getting-started/security-best-practices)
 
 ## Exercises
 
