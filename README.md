@@ -25,37 +25,46 @@ At the end of this README you'll find my own word of advice on how to approach t
   - Browser API
   - Node API
 
-## 2.JavaScript Fundamentals
+## 2. JavaScript Fundamentals
 
 - [Language Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-- [Variables: Block-level vs Function-level scope](./vanilla/vars.md)
+- [Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [Expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
+- [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Scope: Block-level vs Function-level](./vanilla/vars.md)
+- [Lexical scope & Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 - [Built-in objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#built-ins)
   - [Primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+    - [Numbers and dates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
   - Collections
     - [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
     - [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
     - [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
     - [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
     - [WeakSet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
-- [Control flow](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#control_flow)
 - [Objects in detail](./vanilla/objects.md)
 - [Prototypes and Constructors](./vanilla/proto.md)
 - [`this` keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 - [Hoisting](./vanilla/hoisting.md)
-- [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 - [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode#no_this_substitution)
 - [Single Threaded JS](https://developer.mozilla.org/en-US/docs/Glossary/Thread)
   - [Introducing Workers](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-  - [Web Workers API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)
+  - [Web Workers API and timers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)
+  - [Microtasks](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
+- [Asynchronous programming](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
+  - [Callbacks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#callbacks)
+  - [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- [Iterators and generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [Meta programming (Proxy and Reflect)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Meta_programming)
+- [Memory management and garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management)
 
 ## 3. Node
 
 - [Node, event-driven, non-blocking I/O model](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
-- [Event Loop](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
-- [Asynchronous Code](./nodejs/asynchronous.md)
-  - [Callbacks](./nodejs/callbacks.md)
-  - [Promises](./nodejs/promises.md)
-  - [async/await](./nodejs/async-await.md)
+- [Concurrency model and the Event Loop](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
 - [Buffers](./nodejs/buffers.md)
 - [Streams](./nodejs/streams.md)
 - [Back-pressure in Streams](./nodejs/backpressuring.md)
