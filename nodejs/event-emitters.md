@@ -4,15 +4,17 @@ The core of Node.js is Event-Driven programming, which we can achieve with the `
 
 ## Events & Emitters
 
-Much of the Node.js core API is built around an indiomatic _Asynchronous Event-Driven Architecture_, in which certain kinds of objects (called '_emmiters_') emit named events that cause `Function` objects ('_listeners_' to be called).
+Much of the Node.js core API is built around an idiomatic _Asynchronous Event-Driven Architecture_, in which certain kinds of objects (called '_emmiters_') emit named events that cause `Function` objects ('_listeners_' to be called).
 
 For instance, a `net.Server` object emits an event each time a peer connects to it, a `fs.ReadStream` emits an event when the file is opened, a `stream` emits an event whenever data is available to read.
 
 All objects that emit events are instances of `EventEmitter` class. These objects expose an `eventEmitter.on()` function that allows one or more functions to be attached to named events emitted by the objects.
 
-When the `EventEmitter` object emits an event, all of the functions attached to that specific event are called _synchronously_. Any values returned by the called listeners are _ignored_ and will be discarded.
+When the `EventEmitter` object emits an event, all the functions attached to that specific event are called _synchronously_. Any values returned by the called listeners are _ignored_ and will be discarded.
 
-### Example
+## Examples
+
+### Simple event handling
 
 ```javascript
 const EventEmitter = require('events')
@@ -47,7 +49,7 @@ emitter.on('event', function(a, b) {
 emitter.emit('event', 'a', 'b');
 ```
 
-It is possible to use ES6 Arrow functions, however, when doing so, the `this` keyword will no longer refernce the `EventEmitter` instance.
+It is possible to use ES6 Arrow functions, however, when doing so, the `this` keyword will no longer reference the `EventEmitter` instance.
 
 ```javascript
 const EventEmitter = require('events')
@@ -63,23 +65,7 @@ emitter.on('event', (a, b) => {
 emitter.emit('event', 'a', 'b');
 ```
 
-## Async vs Sync
-
-The `EventEmitter` calls all listeners synchronously in the order in which they were registered. This helps havoid race conditions and logic errors.
-
-When appropriate, listener functions can switch to an asynchronous mode of operation using `setImmediate()` or `process.nextTick()` methods.
-
-```javascript
-const myEmitter = new MyEmitter();
-myEmitter.on('event', (a, b) => {
-  setImmediate(() => {
-    console.log('this happens asynchronously');
-  });
-});
-myEmitter.emit('event', 'a', 'b');
-```
-
-## Handling events only once
+### Handling events only once
 
 ```javascript
 const myEmitter = new MyEmitter();
@@ -93,7 +79,7 @@ myEmitter.emit('event');
 // Ignored
 ```
 
-## Error Events
+### Error events
 
 The typical action is for an `'error'` event to be emitted. If an `EventEmitter` _does not_ have at least one listener registered for the `'error'` event, and an `'error'` event is emitted, the error __is thrown__, a stack trace is printed, and the Node.js process exits.
 
@@ -103,7 +89,23 @@ myEmitter.emit('error', new Error('whoops!'));
 // Throws and crashes Node.js
 ```
 
-## Capture rejections of promises
+## Asynchronous event listeners
+
+The `EventEmitter` calls all listeners synchronously in the order in which they were registered. This helps to avoid race conditions and logic errors.
+
+When appropriate, listener functions can switch to an asynchronous mode of operation using `setImmediate()` or `process.nextTick()` methods.
+
+```javascript
+const myEmitter = new MyEmitter();
+myEmitter.on('event', (a, b) => {
+  setImmediate(() => {
+    console.log('this happens asynchronously');
+  });
+});
+myEmitter.emit('event', 'a', 'b');
+```
+
+### Capture rejections of promises
 
 Using `async` functions with event handlers is problematic, because it can lead to unhandled rejections in case of a thrown exception:
 
@@ -114,9 +116,9 @@ ee.on('something', async (value) => {
 });
 ```
 
-## NodeJS Internally
+## Node uses events internally
 
-NodeJs internally uses event emitters widely across its environment, for example streams.
+Node internally uses event emitters widely across its environment, for example streams.
 
 Streams extend event emitters.
 
@@ -153,5 +155,3 @@ Started Reading...Chunk: 1
 ----------------------------------------------------------
 <Buffer 20 76 69 74 61 65 2c 20 65 67 65 73 74 61 73 20 69 64 20 73 65 6d 2e 20 44 6f 6e 65 63 20 75 74 20 75 6c 74 72 69 63 69 65 73 20 6c 6f 72 65 6d 2c 20 ... >Completed Reading...
 ```
-
-Nodejs internally extends `EventEmitter`, exposes custom predefined events (`data`, `open`, `end`), and emits events automatically when required.

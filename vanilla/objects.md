@@ -12,7 +12,7 @@
 
 ## JavaScript Object
 
-In classic OOP, objects are _collections of data and methods_. JS is a prototype-based that uses __functions as classes__.
+In classic OOP, objects are _collections of data and methods_. JS is a prototype-based language that uses __functions as classes__.
 
 In JS, objects can be seen as a __collection of properties__, which can be added and removed after initialization.
 
@@ -24,7 +24,7 @@ There are two types of Object Properties which have certain attributes.
 
 ### Data Property
 
-Associates a key with a value and has following attributes:
+Associates a key with a value and has the following attributes:
 
 - `value` (any)
 - `writable` (boolean): property value can be changed.
@@ -33,14 +33,17 @@ Associates a key with a value and has following attributes:
 
 ### Accessor Property
 
-Associates a key with one of two _Accessor Functions_, `get` and `set`, to retrieve or store a value and has following attributes:
+Associates a key with one of two _Accessor Functions_ (`get` and `set`) to retrieve or store a value and
+has the following attributes:
 
 - `set` (function)
 - `get` (function)
 - `enumerable` (boolean)
 - `configurable` (boolean)
 
-## Example - Creating objects
+## Examples
+
+### Creating objects
 
 ```js
 const obj1 = {};
@@ -53,7 +56,7 @@ obj1.property1 = 77; // error!
 object1.property1; // 42
 ```
 
-## Example - Functions as objects
+### Functions as objects
 
 Functions are regular objects with the additional capability of being callable. We can attach functions to another functions.
 
@@ -74,25 +77,9 @@ const fullName = me.fullName;
 fullName(); // undefined
 ```
 
-## Prototype
+## Copying Objects
 
-Let's understand Prototypes with an example.
-
-In this case, `Person.prototype` is an object shared by all instances of Person, and forms part of a _Lookup Chain called Prototype Chain_. Any time you attempt to access a property of `Person` that isn't set, JS will check its Prototype to see if that property exists there instead. Using this, you can add extra methods to existing objects at runtime.
-
-```js
-function Person(first, last) {
- this.first = first;
- this.last = last;
-}
-Person.prototype.fullName = function() {
- return `${this.firstName}, ${this.lastName)`
-}
-```
-
-Prototype then forms part of a chain, and the root of that chain is `Object.prototype` whose methods include `toString()` and others.o
-
-## Copying Objects and `Object.assign()`
+### Using `Object.assign()`
 
 Sometimes we'll see ourselves wanting to make a copy of an object.
 

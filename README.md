@@ -50,8 +50,8 @@ At the end of this README you'll find my own word of advice on how to approach t
 
 ## 3. Node
 
-- [Node, event-driven, non-blocking I/O model](./nodejs)
-- [Event Loop](./nodejs/eventloop.md)
+- [Node, event-driven, non-blocking I/O model](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
+- [Event Loop](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
 - [Asynchronous Code](./nodejs/asynchronous.md)
   - [Callbacks](./nodejs/callbacks.md)
   - [Promises](./nodejs/promises.md)
@@ -62,7 +62,7 @@ At the end of this README you'll find my own word of advice on how to approach t
 - [Event Emitters](./nodejs/event-emitters.md)
 - [Anatomy of HTTP Transaction](./nodejs/http-anatomy.md)
 
-## 4. Exerices
+## 4. Exercises
 
 - [Custom array functional methods](exercises/array/custom-methods)
 
